@@ -18,7 +18,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y imagemagick ghostscript
 
       - name: Convert resume.pdf to resume.png
-        run: convert -density 300 resume.pdf -quality 90 resume.png
+        run: convert -density 300 resume.pdf -background white -alpha remove -alpha off -quality 90 resume.png
 
       - name: Commit and push resume.png
         run: |
