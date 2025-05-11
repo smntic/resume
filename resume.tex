@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex
+% Author : Simon Ashton
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+    \if\relax\detokenize{#5}\relax\else
+      #5
+    \fi
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textit{#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.23in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\bigO}{\mathcal{O}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Simon Ashton} \\ \vspace{5pt}
+    \small 778-917-9843 $|$ \href{mailto:simon@smntic.dev}{\underline{simon@smntic.dev}} $|$ 
+    \raisebox{-0.05em}{\faLinkedin}\
+    \href{https://linkedin.com/in/simon-ashton}{\underline{linkedin.com/in/simon-ashton}} $|$
+    \raisebox{-0.1em}{\faGithub}\
+    \href{https://github.com/smntic}{\underline{github.com/smntic}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Simon Fraser University}{Burnaby, BC}
+      {Bachelor of Science in Computer Science -- 4.16 GPA}{Sept. 2024 -- April 2030}
+      \resumeItemListStart
+        \resumeItem{Competitive programming club (core member).}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------COMPETITIONS-----------
+\section{Competitions}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Top Competitive Programmer}}{Oct. 2022 -- Present}
+          \resumeItemListStart
+            \resumeItem{Candidate Master on Codeforces (top 2.9\%).}
+            \resumeItem{5-Star on CodeChef (top 0.9\%).}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{SFU MASH Programming Contest Winner}}{March 2025}
+          \resumeItemListStart
+            \resumeItem{Used Kruskall's algorithm to efficiently find the MST of a trade network in $\bigO(n^2)$.}
+            \resumeItem{Wrote the only correct solution to Dijkstra problem (identified test data flaw post-contest).}
+            \resumeItem{Placed $1^\text{st}$ among 20 teams.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{DreamHacks Winner}}{March 2025}
+          \resumeItemListStart
+            \resumeItem{Simulated n-body force interactions in $\bigO(n^2)$ from scratch in three.js.}
+            \resumeItem{Collaborated with 3D graphics specialist to produce immersive dream-like visuals.}
+            \resumeItem{Won "First Light Award" (top prize) from 26 teams.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{SynthScript} $|$ \emph{C++, doctest, GitHub Actions}}{Dec. 2023 -- Oct. 2024}
+          \resumeItemListStart
+            \resumeItem{Self-learned programming language design in 2 months.}
+            \resumeItem{Implemented scripting language with recursive descent parser and AST interpreter.}
+            \resumeItem{Unit-tested in 9 development environments with GitHub Actions.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{cp-tool} $|$ \emph{Python, GitHub Actions, PyPI}}{Aug. 2023 -- Jan. 2025}
+          \resumeItemListStart
+            \resumeItem{Built CLI to automate competitive programming setup, saving 10+ seconds per problem.}
+            \resumeItem{Implemented GitHub Actions pipeline for automatic PyPI releases.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------OPEN-SOURCE-----------
+\section{Open Source}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Godot Engine Contributor} $|$ \emph{C++, doctest}}{March 2024 -- Sept. 2024}
+          \resumeItemListStart
+            \resumeItem{Navigated 1M+ LOC codebase to diagnose and fix text editor edge cases.}
+            \resumeItem{Added regression tests covering 7 edge cases to prevent future failures.}
+            \resumeItem{Collaborated with core maintainers to ensure correct implementation.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}: C++, Python (Advanced) | JavaScript (Intermediate) \\
+        \textbf{Systems}: Linux (NixOS, Arch), Git, CI/CD (GitHub Actions) \\
+        \textbf{Algorithms}: Graph Theory, Dynamic Programming, Network Flows, Optimization \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
+
