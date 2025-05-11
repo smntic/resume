@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'resume.pdf'
+  workflow_dispatch:
 
 jobs:
   convert-pdf:
