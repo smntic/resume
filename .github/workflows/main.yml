@@ -1,0 +1,28 @@
+name: Convert PDF to PNG
+
+on:
+  push:
+    paths:
+      - 'resume.pdf'
+
+jobs:
+  convert-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install ImageMagick and Ghostscript
+        run: sudo apt-get update && sudo apt-get install -y imagemagick ghostscript
+
+      - name: Convert resume.pdf to resume.png
+        run: convert -density 300 resume.pdf -quality 90 resume.png
+
+      - name: Commit and push resume.png
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add resume.png
+          git commit -m "Auto-generate resume.png from resume.pdf" || echo "No changes to commit"
+          git push
