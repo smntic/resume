@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1746984145.92157 "resume.tex" "resume.pdf" "resume" 1746984146.31043 0
+["pdflatex"] 1746987669.66679 "resume.tex" "resume.pdf" "resume" 1746987670.11258 0
   "/nix/store/53xcxxqpcqaas39ixx640qhgwk5cnzdl-texlive-combined-full-2023-final-texmfdist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/nix/store/53xcxxqpcqaas39ixx640qhgwk5cnzdl-texlive-combined-full-2023-final-texmfdist/fonts/map/fontname/texfonts.map" 1 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/nix/store/53xcxxqpcqaas39ixx640qhgwk5cnzdl-texlive-combined-full-2023-final-texmfdist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1 1004 54797486969f23fa377b128694d548df ""
@@ -102,9 +102,9 @@
   "/nix/store/axjdr5qxf4arirf2kqjf1wxfs3yk7ca8-texlive-combined-full-2023-final/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5467763 dd0150e87ed6dfdc14b154a1318fa7e7 ""
   "/nix/store/axjdr5qxf4arirf2kqjf1wxfs3yk7ca8-texlive-combined-full-2023-final/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 8221982 97dee8367cf6059af1157569f81de371 ""
   "/nix/store/axjdr5qxf4arirf2kqjf1wxfs3yk7ca8-texlive-combined-full-2023-final/share/texmf-var/web2c/texmf.cnf" 1 43155 8c7bb5bd0f60b5edbd9e20efe1b00841 ""
-  "resume.aux" 1746984146.25928 783 f8e49b2c8fd2dec2d48b675f5a751307 "pdflatex"
-  "resume.out" 1746984146.26028 501 e115416c5a8a05fc33f0095e2843f034 "pdflatex"
-  "resume.tex" 1746984145.69027 6844 b8d0b0b5b89457440866dfbd6180a3d5 ""
+  "resume.aux" 1746987670.06035 783 f8e49b2c8fd2dec2d48b675f5a751307 "pdflatex"
+  "resume.out" 1746987670.06135 501 e115416c5a8a05fc33f0095e2843f034 "pdflatex"
+  "resume.tex" 1746987668.58644 6849 468d1533337030d9f47230599506cc6b ""
   (generated)
   "resume.aux"
   "resume.log"
