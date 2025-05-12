@@ -29,6 +29,7 @@
 *.nlo
 *.nls
 *.out
+*.pdf
 *.png
 *.pyg
 *.run.xml

@@ -1,29 +1,42 @@
-name: Convert PDF to PNG
+name: Compile Resume and Convert to PNG
 
 on:
   push:
     paths:
-      - 'resume.pdf'
+      - 'resume.tex'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 jobs:
-  convert-pdf:
+  build-resume:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install ImageMagick and Ghostscript
-        run: sudo apt-get update && sudo apt-get install -y imagemagick ghostscript
+      - name: Install LaTeX, ImageMagick, and Ghostscript
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y     \
+            texlive-latex-recommended \
+            texlive-latex-extra       \
+            texlive-fonts-recommended \
+            texlive-fonts-extra       \
+            imagemagick               \
+            ghostscript
+
+      - name: Compile resume.tex to resume.pdf
+        run: pdflatex -interaction=nonstopmode resume.tex
 
       - name: Convert resume.pdf to resume.png
-        run: convert -density 300 resume.pdf -background white -alpha remove -alpha off -quality 90 resume.jpg
+        run: convert -density 300 resume.pdf -background white -alpha remove -alpha off -quality 90 resume.png
 
-      - name: Commit and push resume.png
+      - name: Commit and push resume.pdf and resume.png
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add resume.png
-          git commit -m "Auto-generate resume.png from resume.pdf" || echo "No changes to commit"
+          git add -f resume.pdf resume.png
+          git commit -m "Auto-build resume.pdf and resume.png from resume.tex" || echo "No changes to commit"
           git push
+
